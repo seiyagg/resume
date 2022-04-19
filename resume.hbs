@@ -315,7 +315,7 @@
 
             <div style="text-align:center">
               <div class="detail no-print" style="font-size:1.5rem;margin-top:2rem;">
-                <a href="https://resume.389424.xyz/resume.pdf" class="info" itemprop="pdf" target="_blank">
+                <a href="javascript:void(0)" onclick="viewPDF()" class="info" itemprop="pdf" target="_blank">
                   PDF Version
                 </a>
               </div>
@@ -333,6 +333,9 @@
 
     
     <script>
+      function viewPDF() {
+        window.open("https://resume.389424.xyz/resume.pdf?t=" + new Date().getTime(), "_blank");
+      }
       async function updateStars(){
         await Promise.all(
           Array.from(document.querySelectorAll('[data-gh-api]'))
